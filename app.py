@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Query, Path
 
-from typing import Annotated
+from typing import re, Annotated
 
 app = FastAPI()
 
@@ -83,9 +83,29 @@ async def read_items_example(
         results.update({"q": q})
     return results
 
-
+"""
+# contoh filter param
+"""
 @app.get("/filterParam")
 async def read_items_filterParam(
     filter_query: Annotated[FilterParam, Query()]
 ):
     return filter_query
+
+
+""" Multiple Query Parameters
+"""
+
+
+@app.put("/multi-items/{item_id}")
+async def multi_items(
+    item_id: Annotated[int, Path(title="item ID", ge=1, le=100)],
+    q: str | None = None,
+    item: Item | None = None
+):
+    result = {"item_id": item_id}
+    if q:
+        result.update({"q": q})
+    if item:
+        result.update({"item": item.model_dump()})
+    return result
