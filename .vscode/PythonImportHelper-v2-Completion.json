@@ -1,0 +1,262 @@
+[
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FilterParam",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "isExtraImport": true,
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": "fastapi_venv.bin.activate_this",
+        "description": "fastapi_venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.11/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "detail": "fastapi_venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": "fastapi_venv.bin.activate_this",
+        "description": "fastapi_venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.11/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]",
+        "detail": "fastapi_venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": "fastapi_venv.bin.activate_this",
+        "description": "fastapi_venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.11/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "fastapi_venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": "fastapi_venv.bin.activate_this",
+        "description": "fastapi_venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.11/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "fastapi_venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": "fastapi_venv.bin.activate_this",
+        "description": "fastapi_venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.11/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "fastapi_venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": "fastapi_venv.bin.activate_this",
+        "description": "fastapi_venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "fastapi_venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": "fastapi_venv.bin.activate_this",
+        "description": "fastapi_venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": "fastapi_venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": "fastapi_venv.bin.activate_this",
+        "description": "fastapi_venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": "fastapi_venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "Item",
+        "kind": 6,
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "peekOfCode": "class Item(BaseModel):\n    name: str\n    description: str | None = None\n    price: float\n    tax: float | None = None\nclass FilterParam(BaseModel):\n    model_config = {\n        \"extra\": \"forbid\"\n    }\n    limit: int = Field(100, gt=0, le=100)",
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "FilterParam",
+        "kind": 6,
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "peekOfCode": "class FilterParam(BaseModel):\n    model_config = {\n        \"extra\": \"forbid\"\n    }\n    limit: int = Field(100, gt=0, le=100)\n    offset: int = Field(0, ge=0)\n    order_by:  Literal[\"created_at\", \"updated_at\"] = \"created_at\"\n    tags: list[str] = []",
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = FastAPI()\nfrom models.base_model import FilterParam, Item\nfake_items_db = [{\"item_id\": i, \"name\": f\"Item {i}\"} for i in range(1000)]\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Hello World\"}\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: int):\n    return {\"item_id\": item_id}\n@app.get(\"/items\")",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "fake_items_db",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "fake_items_db = [{\"item_id\": i, \"name\": f\"Item {i}\"} for i in range(1000)]\n@app.get(\"/\")\nasync def root():\n    return {\"message\": \"Hello World\"}\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: int):\n    return {\"item_id\": item_id}\n@app.get(\"/items\")\nasync def read_items(skip: int = 0, limit: int = 10):\n    return fake_items_db[skip : skip + limit]",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "gt",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "gt = greater than ==> atau >\nge = greater than or equal to ==> atau >=\nlt = less than ==> atau <\nlt = less than ==> atau <=\nle = less than or equal to ==> atau <=\n\"\"\"\n@app.get(\"/pthexample/{item_id}\")\nasync def read_items_example(\n    item_id: Annotated[int, Path(title=\"Item ID\")],\n    q: Annotated[str, Query(alias=\"item-query\")] = None,",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "ge",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "ge = greater than or equal to ==> atau >=\nlt = less than ==> atau <\nlt = less than ==> atau <=\nle = less than or equal to ==> atau <=\n\"\"\"\n@app.get(\"/pthexample/{item_id}\")\nasync def read_items_example(\n    item_id: Annotated[int, Path(title=\"Item ID\")],\n    q: Annotated[str, Query(alias=\"item-query\")] = None,\n):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "lt",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "lt = less than ==> atau <\nlt = less than ==> atau <=\nle = less than or equal to ==> atau <=\n\"\"\"\n@app.get(\"/pthexample/{item_id}\")\nasync def read_items_example(\n    item_id: Annotated[int, Path(title=\"Item ID\")],\n    q: Annotated[str, Query(alias=\"item-query\")] = None,\n):\n    results = {\"item_id\": item_id}",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "lt",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "lt = less than ==> atau <=\nle = less than or equal to ==> atau <=\n\"\"\"\n@app.get(\"/pthexample/{item_id}\")\nasync def read_items_example(\n    item_id: Annotated[int, Path(title=\"Item ID\")],\n    q: Annotated[str, Query(alias=\"item-query\")] = None,\n):\n    results = {\"item_id\": item_id}\n    if q:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "le",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "le = less than or equal to ==> atau <=\n\"\"\"\n@app.get(\"/pthexample/{item_id}\")\nasync def read_items_example(\n    item_id: Annotated[int, Path(title=\"Item ID\")],\n    q: Annotated[str, Query(alias=\"item-query\")] = None,\n):\n    results = {\"item_id\": item_id}\n    if q:\n        results.update({\"q\": q})",
+        "detail": "app",
+        "documentation": {}
+    }
+]
